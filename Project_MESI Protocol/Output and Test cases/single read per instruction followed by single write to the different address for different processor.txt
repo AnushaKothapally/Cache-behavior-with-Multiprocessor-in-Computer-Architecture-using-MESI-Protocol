@@ -1,0 +1,81 @@
+Hello MESI
+Cycle1
+----------------------
+ total instruction are : 3
+ added to P1[R1 10001000000000000 1]
+added to P2[W2 10101000000000000 Vinod]
+added to P3 Queue[R3 11101000000000000 3]
+instruction in p1 request Q is [R1 10001000000000000 1]
+In L1Cache of P1  R1 10001000000000000 1
+No data found in P1 L1 cache
+in L1Cache of P2 W2 10101000000000000 Vinod
+in L1Cache of P3 R3 11101000000000000 3
+The received instuction from processor to SystemBus is : BUSR1 10001000000000000 1
+In P1 Respone Queue, received instuction from other processor isBUSR1 10001000000000000 1
+In P3 response,Instruction from other processor is:BUSR1 10001000000000000 1
+Cycle2
+----------------------
+in L1Cache of P2 BUSR1 10001000000000000 1
+No data found in P2 L1 Cache also
+in L1Cache of P3 BUSR1 10001000000000000 1
+No data found in P3 Cache also
+Data received from processorBUSR1 10001000000000000 1 IACK0
+Data received from processorBUSR1 10001000000000000 1 IACK1
+as 2 Negative acknowledgements has been received from processors,now going to Check in Memory;
+Cycle3
+----------------------
+The received instuction from processor to SystemBus is : BusW2Ex 10101000000000000 Vinod
+Now In P1 request Q after reading data for instructionR1 10001000000000000 1
+In P1 Respone Queue, received instuction from other processor is: BusW2Ex 10101000000000000 Vinod
+In P3 response,Instruction from other processor is:BusW2Ex 10101000000000000 Vinod
+Cycle4
+----------------------
+in L1Cache of P1 Load 10001000000000000 1
+ To Write the data from memory to P1L1D, Current instruction is:  Load 10001000000000000 1
+Data Loaded to L1D of P1 successfully: 
+in L1Cache of P3 BusW2Ex 10101000000000000 Vinod
+Invalidate as it is modifying
+Data read for instruction: R1 10001000000000000 1 is: 
+A
+
+n
+
+u
+
+s
+
+h
+
+a
+
+T
+
+w
+
+o
+
+Data received from processorBusW2Ex 10101000000000000 Vinod IACK0
+Cycle5
+----------------------
+In L1Cache of P1  BusW2Ex 10101000000000000 Vinod
+Invalidate as it is modifying
+Data received from processorBusW2Ex 10101000000000000 Vinod IACK1
+Now In P2 request Q after reading data for instruction
+Cycle6
+----------------------
+in L1Cache of P2 S2 10101000000000000 Vinod I
+Data loading into cache of P2 
+In P2L1D, Current instruction is:  S2 10101000000000000 Vinod 0
+Data Loaded successfully P2 cache 
+The received instuction from processor to SystemBus is : BUSR3 11101000000000000 3
+In P1 Respone Queue, received instuction from other processor is: BUSR3 11101000000000000 3
+In P1 Respone Queue, received instuction from other processor isBUSR3 11101000000000000 3
+Cycle7
+----------------------
+In L1Cache of P1  BUSR3 11101000000000000 3
+No data found in P1 L1 Cache also
+in L1Cache of P2 BUSR3 11101000000000000 3
+No data found in P2 L1 Cache also
+Data received from processorBUSR3 11101000000000000 3 IACK0
+Data received from processorBUSR3 11101000000000000 3 IACK1
+as 2 Negative acknowledgements has been received from processors,now going to Check in Memory;

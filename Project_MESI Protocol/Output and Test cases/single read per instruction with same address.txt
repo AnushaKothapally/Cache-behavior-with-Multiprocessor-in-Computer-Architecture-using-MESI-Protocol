@@ -1,0 +1,126 @@
+Hello MESI
+Cycle1
+----------------------
+ total instruction are : 1
+ Instruction has been added to P1[R1 10001000000000000 1]
+instruction in p1 request Q is [R1 10001000000000000 1]
+In L1Cache of P1  R1 10001000000000000 1
+No data found in P1 L1 cache
+The received instuction from processor to SystemBus is : BUSR1 10001000000000000 1
+In P1 Respone Queue, received instuction from other processor isBUSR1 10001000000000000 1
+In P3 response,Instruction from other processor is:BUSR1 10001000000000000 1
+Cycle2
+----------------------
+ total instruction are : 1
+Queue is in waiting
+in L1Cache of P2 BUSR1 10001000000000000 1
+No data found in P2 L1 Cache also
+in L1Cache of P3 BUSR1 10001000000000000 1
+No data found in P3 Cache also
+Data received from processorBUSR1 10001000000000000 1 IACK0
+Data received from processorBUSR1 10001000000000000 1 IACK1
+as 2 Negative acknowledgements has been received from processors,now going to Check in Memory;
+Cycle3
+----------------------
+ total instruction are : 1
+Queue is in waiting
+Now In P1 request Q after reading data for instructionR1 10001000000000000 1
+Cycle4
+----------------------
+ total instruction are : 1
+added to P2[R2 10001000000000000 2]
+in L1Cache of P1 Load 10001000000000000 1
+ To Write the data from memory to P1L1D, Current instruction is:  Load 10001000000000000 1
+Data Loaded to L1D of P1 successfully: 
+in L1Cache of P2 R2 10001000000000000 2
+No data found in P2 L1 cache
+Data read for instruction: R1 10001000000000000 1 is: 
+A
+
+n
+
+u
+
+s
+
+h
+
+a
+
+T
+
+w
+
+o
+
+The received instuction from processor to SystemBus is : BUSR2 10001000000000000 2
+In P1 Respone Queue, received instuction from other processor is: BUSR2 10001000000000000 2
+In P3 response,Instruction from other processor is:BUSR2 10001000000000000 2
+Cycle5
+----------------------
+ total instruction are : 1
+Queue is in waiting
+In L1Cache of P1  BUSR2 10001000000000000 2
+tag matched so checking in P1L1d
+In L1D, Current instruction is:  BUSR2 10001000000000000 2
+L1D[BUSR2 10001000000000000 2 AnushaTwo]
+in L1Cache of P3 BUSR2 10001000000000000 2
+No data found in P3 Cache also
+Data received from processorBUSR2 10001000000000000 2 IACK0
+Cycle6
+----------------------
+ total instruction are : 1
+Queue is in waiting
+Data received from processorBUSR2 10001000000000000 2 AnushaTwoACK1
+Now In P2 request Q after reading data for instruction
+Cycle7
+----------------------
+ total instruction are : 1
+added to P3[R3 10001000000000000 3]
+in L1Cache of P2 Load 10001000000000000 2
+Data loading into cache of P2 
+ To Write the data from memory to P2L1D, Current instruction is:  Load 10001000000000000 2
+Data Loaded successfully P2 cache 
+in L1Cache of P3 R3 10001000000000000 3
+Data read for instruction: R2 10001000000000000 2 is: 
+An
+
+us
+
+ha
+
+Tw
+
+o
+
+The received instuction from processor to SystemBus is : BUSR3 10001000000000000 3
+In P1 Respone Queue, received instuction from other processor is: BUSR3 10001000000000000 3
+In P1 Respone Queue, received instuction from other processor isBUSR3 10001000000000000 3
+Cycle8
+----------------------
+In L1Cache of P1  BUSR3 10001000000000000 3
+tag matched so checking in P1L1d
+In L1D, Current instruction is:  BUSR3 10001000000000000 3
+L1D[BUSR3 10001000000000000 3 AnushaTwo]
+in L1Cache of P2 BUSR3 10001000000000000 3
+tag matched so checking in P2L1d[[Ljava.lang.String;@55f96302
+In P2L1D, Current instruction is:  BUSR3 10001000000000000 3
+P2L1D[BUSR3 10001000000000000 3 AnushaTwo]
+Cycle9
+----------------------
+Data received from processorBUSR3 10001000000000000 3 AnushaTwoACK2
+Data received from processorBUSR3 10001000000000000 3 AnushaTwoACK3
+Now status changed to Request to Memory
+Now Placing in P3 request Q after  checking in other processors for instruction R3 10001000000000000 3 
+Cycle10
+----------------------
+in L1Cache of P3 Load 10001000000000000 3
+Data loading into L1 cache of P3 
+In P3L1D, Current instruction is:  Load 10001000000000000 3
+Data Loaded successfully P3 cache
+Data read for instruction: R3 10001000000000000 3 is: 
+Anu
+
+sha
+
+Two

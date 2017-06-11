@@ -1,0 +1,59 @@
+Hello MESI
+All[R3 10001000000000000 2,W3 10001000000000000 Lakshman]
+Cycle1
+----------------------
+ instruction length: 2
+ instruction length 2 executingR3 10001000000000000 2
+added to P3 Queue[R3 10001000000000000 2]
+ instruction length 2 executingW3 10001000000000000 Lakshman
+added to P3 Queue[R3 10001000000000000 2, W3 10001000000000000 Lakshman]
+in L1Cache of P3 R3 10001000000000000 2
+SystemBus received ins from processor: BUSR3 10001000000000000 2
+In P1 Respone Queue, received instuction from other processor is: BUSR3 10001000000000000 2
+In P2 Respone Queue, received instuction from other processor isBUSR3 10001000000000000 2
+Cycle2
+----------------------
+In L1Cache of P1  BUSR3 10001000000000000 2
+No data found in P1 L1 Cache also
+in L1Cache of P2 BUSR3 10001000000000000 2
+No data found in P2 L1 Cache also
+in L1Cache of P3 W3 10001000000000000 Lakshman
+Data received from processorBUSR3 10001000000000000 2 IACK0
+Data received from processorBUSR3 10001000000000000 2 IACK1
+Checking in Memory; ack received2
+Data read isBUSR3 10001000000000000 2
+In Systembus, Data read from MemoryBUSR3 10001000000000000 2
+Cycle3
+----------------------
+SystemBus received ins from processor: BusW3Ex 10001000000000000 Lakshman
+In P1 Respone Queue, received instuction from other processor is: BusW3Ex 10001000000000000 Lakshman
+In P2 Respone Queue, received instuction from other processor isBusW3Ex 10001000000000000 Lakshman
+Now Placing in P3 request Q after  checking in other processors for instruction R3 10001000000000000 2 
+Cycle4
+----------------------
+In L1Cache of P1  BusW3Ex 10001000000000000 Lakshman
+Invalidate as it is modifying
+in L1Cache of P2 BusW3Ex 10001000000000000 Lakshman
+Invalidate as it is modifying
+in L1Cache of P3 Load 10001000000000000 2
+Data loading into L1 cache of P3 
+In P3L1D, Current instruction is:  Load 10001000000000000 2
+Data Loaded successfully P3 cache
+Data read for instruction: R3 10001000000000000 2 is
+An
+
+us
+
+ha
+
+Tw
+
+o
+
+Data received from processorBusW3Ex 10001000000000000 Lakshman IACK0
+Data received from processorBusW3Ex 10001000000000000 Lakshman IACK1
+Now Placing in P3 request Q after  checking in other processors for instruction S3 10001000000000000 La
+Cycle5
+----------------------
+in L1Cache of P3 S3 10001000000000000 Lakshman I
+Data loading into L1 cache of P3 

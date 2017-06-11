@@ -1,0 +1,2 @@
+Dualprocessor p2p3
+W2 10101000000000000 Mamidala,W3 11001000000000000 Kakinada

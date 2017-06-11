@@ -1,0 +1,61 @@
+Hello MESI
+All[R3 10001000000000000 2,W2 10001000000000000 Lakshman]
+Cycle1
+----------------------
+ instruction length: 2
+ instruction length 2 executingR3 10001000000000000 2
+added to P3 Queue[R3 10001000000000000 2]
+ instruction length 2 executingW2 10001000000000000 Lakshman
+added to P2[W2 10001000000000000 Lakshman]
+in L1Cache of P2 W2 10001000000000000 Lakshman
+in L1Cache of P3 R3 10001000000000000 2
+SystemBus received ins from processor: BusW2Ex 10001000000000000 Lakshman
+In P1 Respone Queue, received instuction from other processor is: BusW2Ex 10001000000000000 Lakshman
+In P3 response,Instruction from other processor is:BusW2Ex 10001000000000000 Lakshman
+Cycle2
+----------------------
+In L1Cache of P1  BusW2Ex 10001000000000000 Lakshman
+Invalidate as it is modifying
+in L1Cache of P3 BusW2Ex 10001000000000000 Lakshman
+Invalidate as it is modifying
+Data received from processorBusW2Ex 10001000000000000 Lakshman IACK0
+Data received from processorBusW2Ex 10001000000000000 Lakshman IACK1
+Now In P2 request Q after reading data for instruction
+Cycle3
+----------------------
+in L1Cache of P2 S2 10001000000000000 Lakshman I
+Data loading into cache of P2 
+In P2L1D, Current instruction is:  S2 10001000000000000 Lakshman 0
+Data Loaded successfully P2 cache 
+SystemBus received ins from processor: BUSR3 10001000000000000 2
+In P1 Respone Queue, received instuction from other processor is: BUSR3 10001000000000000 2
+In P2 Respone Queue, received instuction from other processor isBUSR3 10001000000000000 2
+Cycle4
+----------------------
+In L1Cache of P1  BUSR3 10001000000000000 2
+No data found in P1 L1 Cache also
+in L1Cache of P2 BUSR3 10001000000000000 2
+Dirty bit is true: BUSR3 10001000000000000 2 DB
+tag matched so checking in P2L1d[[Ljava.lang.String;@55f96302
+In P2L1D, Current instruction is:  BUSR3 10001000000000000 2 DB
+P2L1D[BUSR3 10001000000000000 2 DB Lakshman]
+Data received from processorBUSR3 10001000000000000 2 IACK0
+Cycle5
+----------------------
+Data received from processorBUSR3 10001000000000000 2 DB LakshmanACK1
+Now Placing in P3 request Q after  checking in other processors for instruction R3 10001000000000000 2 
+Data is stored into memory for instruction: at location 10001000000000000
+Cycle6
+----------------------
+in L1Cache of P3 Load 10001000000000000 2
+Data loading into L1 cache of P3 
+In P3L1D, Current instruction is:  Load 10001000000000000 2
+Data Loaded successfully P3 cache
+Data read for instruction: R3 10001000000000000 2 is
+La
+
+ks
+
+hm
+
+an

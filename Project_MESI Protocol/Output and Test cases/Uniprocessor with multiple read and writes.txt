@@ -1,0 +1,92 @@
+Hello MESI
+All[W1 10001000000000000 Mamidala,W3 10001000000000000 Kakinada, R1 10001000000000000 2, R1 10001000000000000 1]
+Cycle1
+----------------------
+ instruction length: 2
+ instruction length 2 executingW1 10001000000000000 Mamidala
+ added to P1[W1 10001000000000000 Mamidala]
+ instruction length 2 executingW3 10001000000000000 Kakinada
+added to P3 Queue[W3 10001000000000000 Kakinada]
+instruction in p1 request Q is [W1 10001000000000000 Mamidala]
+In L1Cache of P1  W1 10001000000000000 Mamidala
+in L1Cache of P3 W3 10001000000000000 Kakinada
+Uniprocessor instruction
+BusW1Exinstruction
+Data read isBusW1Ex 10001000000000000
+In Systembus, Data read from MemoryBusW1Ex 10001000000000000
+Cycle2
+----------------------
+ instruction length: 1
+ added to P1[R1 10001000000000000 2]
+instruction in p1 request Q is [R1 10001000000000000 2]
+In L1Cache of P1  R1 10001000000000000 2
+No data found in P1 L1 cache
+Uniprocessor instruction
+BUSR1instruction
+Now In P1 request Q after reading data for instructionS1 10001000000000000 M
+Data read isBUSR1 10001000000000000 2
+In Systembus, Data read from MemoryBUSR1 10001000000000000 2
+Cycle3
+----------------------
+ instruction length: 1
+Queue is in waiting
+In L1Cache of P1  S1 10001000000000000 Mamidala AnushaTwo
+ To Write the data from memory to P1L1D, Current instruction is:  S1 10001000000000000 Mam
+Data Loaded to L1D of P1 successfully: 
+Uniprocessor instruction
+BusW3Exinstruction
+Now In P1 request Q after reading data for instructionR1 10001000000000000 2
+Data read isBusW3Ex 10001000000000000
+In Systembus, Data read from MemoryBusW3Ex 10001000000000000
+Cycle4
+----------------------
+ instruction length: 1
+Queue is in waiting
+in L1Cache of P1 Load 10001000000000000 2
+ To Write the data from memory to P1L1D, Current instruction is:  Load 10001000000000000 2
+Data Loaded to L1D of P1 successfully: 
+Data read for instruction: R1 10001000000000000 2 is
+An
+
+us
+
+ha
+
+Tw
+
+o
+
+Now Placing in P3 request Q after  checking in other processors for instruction S3 10001000000000000 Ka
+Cycle5
+----------------------
+ instruction length: 1
+ added to P1[R1 10001000000000000 1]
+instruction in p1 request Q is [R1 10001000000000000 1]
+In L1Cache of P1  R1 10001000000000000 1
+tag matched so checking in P1L1d[[Ljava.lang.String;@55f96302
+In L1D, Current instruction is:  R1 10001000000000000 1
+L1D[R1 10001000000000000 1 AnushaTwo]
+in L1Cache of P3 S3 10001000000000000 Kakinada AnushaTwo
+Data loading into L1 cache of P3 
+In P3L1D, Current instruction is:  S3 10001000000000000 Kakinada 0
+Data Loaded successfully P3 cache
+Cycle6
+----------------------
+Data read for instruction: R1 10001000000000000 1 is
+A
+
+n
+
+u
+
+s
+
+h
+
+a
+
+T
+
+w
+
+o

@@ -1,0 +1,103 @@
+Hello MESI
+All[W3 10001000000000000 Mamidala,W2 10111000000000000 Lakshman,W1 11111000010000000 Kothagudem, R1 10001000000000000 3]
+Cycle1
+----------------------
+ instruction length: 3
+ instruction length 2 executingW3 10001000000000000 Mamidala
+added to P3 Queue[W3 10001000000000000 Mamidala]
+ instruction length 2 executingW2 10111000000000000 Lakshman
+added to P2[W2 10111000000000000 Lakshman]
+ instruction length 2 executingW1 11111000010000000 Kothagudem
+ added to P1[W1 11111000010000000 Kothagudem]
+instruction in p1 request Q is [W1 11111000010000000 Kothagudem]
+In L1Cache of P1  W1 11111000010000000 Kothagudem
+in L1Cache of P2 W2 10111000000000000 Lakshman
+in L1Cache of P3 W3 10001000000000000 Mamidala
+SystemBus received ins from processor: BusW1Ex 11111000010000000 Kothagudem
+In P2 Respone Queue, received instuction from other processor isBusW1Ex 11111000010000000 Kothagudem
+In P3 response,Instruction from other processor is:BusW1Ex 11111000010000000 Kothagudem
+Cycle2
+----------------------
+ instruction length: 1
+ added to P1[R1 10001000000000000 3]
+instruction in p1 request Q is [R1 10001000000000000 3]
+In L1Cache of P1  R1 10001000000000000 3
+No data found in P1 L1 cache
+in L1Cache of P2 BusW1Ex 11111000010000000 Kothagudem
+Invalidate as it is modifying
+in L1Cache of P3 BusW1Ex 11111000010000000 Kothagudem
+Invalidate as it is modifying
+Data received from processorBusW1Ex 11111000010000000 Kothagudem IACK0
+Data received from processorBusW1Ex 11111000010000000 Kothagudem IACK1
+Now In P1 request Q after reading data for instructionS1 11111000010000000 K
+Cycle3
+----------------------
+In L1Cache of P1  S1 11111000010000000 Kothagudem I
+ To Write the data from memory to P1L1D, Current instruction is:  S1 11111000010000000 Kot
+Data Loaded to L1D of P1 successfully: 
+SystemBus received ins from processor: BUSR1 10001000000000000 3
+In P2 Respone Queue, received instuction from other processor isBUSR1 10001000000000000 3
+In P3 response,Instruction from other processor is:BUSR1 10001000000000000 3
+Cycle4
+----------------------
+in L1Cache of P2 BUSR1 10001000000000000 3
+No data found in P2 L1 Cache also
+in L1Cache of P3 BUSR1 10001000000000000 3
+No data found in P3 Cache also
+Data received from processorBUSR1 10001000000000000 3 IACK0
+Data received from processorBUSR1 10001000000000000 3 IACK1
+Checking in Memory; ack received2
+Data read isBUSR1 10001000000000000 3
+In Systembus, Data read from MemoryBUSR1 10001000000000000 3
+Cycle5
+----------------------
+SystemBus received ins from processor: BusW2Ex 10111000000000000 Lakshman
+Now In P1 request Q after reading data for instructionR1 10001000000000000 3
+In P1 Respone Queue, received instuction from other processor is: BusW2Ex 10111000000000000 Lakshman
+In P3 response,Instruction from other processor is:BusW2Ex 10111000000000000 Lakshman
+Cycle6
+----------------------
+in L1Cache of P1 Load 10001000000000000 3
+ To Write the data from memory to P1L1D, Current instruction is:  Load 10001000000000000 3
+Data Loaded to L1D of P1 successfully: 
+in L1Cache of P3 BusW2Ex 10111000000000000 Lakshman
+Invalidate as it is modifying
+Data read for instruction: R1 10001000000000000 3 is
+Anu
+
+sha
+
+Two
+
+Data received from processorBusW2Ex 10111000000000000 Lakshman IACK0
+Cycle7
+----------------------
+In L1Cache of P1  BusW2Ex 10111000000000000 Lakshman
+Invalidate as it is modifying
+Data received from processorBusW2Ex 10111000000000000 Lakshman IACK1
+Now In P2 request Q after reading data for instruction
+Cycle8
+----------------------
+in L1Cache of P2 S2 10111000000000000 Lakshman I
+Data loading into cache of P2 
+In P2L1D, Current instruction is:  S2 10111000000000000 Lakshman 0
+Data Loaded successfully P2 cache 
+SystemBus received ins from processor: BusW3Ex 10001000000000000 Mamidala
+In P1 Respone Queue, received instuction from other processor is: BusW3Ex 10001000000000000 Mamidala
+In P2 Respone Queue, received instuction from other processor isBusW3Ex 10001000000000000 Mamidala
+Cycle9
+----------------------
+In L1Cache of P1  BusW3Ex 10001000000000000 Mamidala
+Invalidate as it is modifying
+Data present in P1L1d, invalidating:
+in L1Cache of P2 BusW3Ex 10001000000000000 Mamidala
+Invalidate as it is modifying
+Data received from processorBusW3Ex 10001000000000000 Mamidala IACK0
+Data received from processorBusW3Ex 10001000000000000 Mamidala IACK1
+Now Placing in P3 request Q after  checking in other processors for instruction S3 10001000000000000 Ma
+Cycle10
+----------------------
+in L1Cache of P3 S3 10001000000000000 Mamidala I
+Data loading into L1 cache of P3 
+In P3L1D, Current instruction is:  S3 10001000000000000 Mamidala 0
+Data Loaded successfully P3 cache
